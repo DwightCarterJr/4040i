@@ -14,7 +14,10 @@ const actions = {
             .then(
                 user => {
                     commit('loginSuccess', user);
+                    // if(user.user.role == "admin") 
                     router.push('/admindashboard');
+                    // else 
+                    // router.push('/otherpage');
                 },
                 error => {
                     commit('loginFailure', error);
